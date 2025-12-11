@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="img/readme.png" alt="Descrição da imagem" width="100%">
+</p>
+
 # elysia-awslambda
 
 Use Elysia in AWS Lambda functions with API Gateway v2.
@@ -64,9 +68,9 @@ app.get('/:token', (c: Context) => {
     return c.status(400, { message: 'Token is required' })
   }
 
-  return c.status(200, { 
-    message: 'Token found', 
-    token: c.params.token 
+  return c.status(200, {
+    message: 'Token found',
+    token: c.params.token,
   })
 })
 
@@ -213,11 +217,13 @@ export default async function main(event: any, context: any) {
 The `handle` function wraps your Elysia app and provides the necessary transformation layer between AWS Lambda and Elysia:
 
 1. **Request Transformation**: Converts API Gateway v2 events to standard Web Request objects
+
    - Extracts HTTP method, path, query strings, and headers
    - Handles base64 encoded request bodies
    - Constructs proper URL with protocol and host
 
 2. **Response Transformation**: Converts Elysia Response objects to API Gateway v2 format
+
    - Extracts status code and headers
    - Handles text and binary responses
    - Automatically encodes binary data as base64
@@ -235,9 +241,11 @@ The `handle` function wraps your Elysia app and provides the necessary transform
 Wraps an Elysia app and returns an AWS Lambda handler function.
 
 **Parameters:**
+
 - `app`: An Elysia app instance
 
 **Returns:**
+
 - AWS Lambda handler function with signature `(event: APIGatewayProxyEventV2, context: Context) => Promise<APIGatewayProxyResultV2>`
 
 ## Requirements
