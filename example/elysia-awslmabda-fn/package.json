@@ -1,0 +1,18 @@
+{
+  "name": "bun-server-test",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1693.0",
+    "serverless-bun-plugin": "^0.1.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "elysia": "^1.4.18",
+    "elysia-awslambda": "^0.1.0"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "elysia-awslambda",
+  "description": "Use Elysia in the AWS Lambda function",
+  "version": "0.1.1",
+  "main": "index.js",
+  "repository": "https://github.com/thadeu/elysia-awslambda.git",
+  "author": "thadeu <tadeuu@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "index.ts"
+  ],
+  "exports": {
+    ".": "./index.ts"
+  },
+  "keywords": [
+    "elysia",
+    "awslambda",
+    "lambda",
+    "bun",
+    "serverless"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "aws-lambda": "^1.0.7",
+    "elysia": "^1.4.18"
+  },
+  "devDependencies": {
+    "serverless": "^3.40.0",
+    "typescript": "^5.8.3"
+  }
+}
